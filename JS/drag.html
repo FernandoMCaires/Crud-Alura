@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho Drag and Drop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Div de Produtos -->
+    <div class="produtos">
+        <h1>Tabela de Produtos</h1>
+        <div class="produto" data-preco="30" draggable="true">Produto 1 - R$30</div>
+        <div class="produto" data-preco="50" draggable="true">Produto 2 - R$50</div>
+        <div class="produto" data-preco="20" draggable="true">Produto 3 - R$20</div>
+    </div>
+
+    <!-- Div do Carrinho -->
+    <h2>Carrinho</h2>
+    <div class="carrinho" id="carrinho"></div>
+
+    <p>Total: R$ <span id="totalValue">0</span></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
