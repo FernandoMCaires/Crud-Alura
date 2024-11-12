@@ -18,16 +18,21 @@ $dadosAlmoco = $produtoRepositorio->opcoesAlmoco();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/admin.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="img/icone-serenatto.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Biriba - Cardápio</title>
+    <title>Lanchonete - Cardápio</title>
 </head>
 
 <body>
     <main>
+
+        <a href="admin.php"> <input type="submit" class="botao-redirect" value="admin"></a>
+
         <section class="container-banner">
             <div class="container-texto-banner">
                 <img src="img/logo-serenatto.png" class="logo" alt="logo-serenatto">
@@ -40,15 +45,15 @@ $dadosAlmoco = $produtoRepositorio->opcoesAlmoco();
                 <img class="ornaments" src="img/ornaments-coffee.png" alt="ornaments">
             </div>
             <div class="container-cafe-manha-produtos">
-            <?php foreach ($dadosCafe as $cafe):?>
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="<?= $cafe->getImagemFormatada() ?> " >
+                <?php foreach ($dadosCafe as $cafe): ?>
+                    <div class="container-produto">
+                        <div class="container-foto">
+                            <img src="<?= $cafe->getImagemFormatada() ?> ">
+                        </div>
+                        <p><?= $cafe->getNome() ?></p>
+                        <p><?= $cafe->getDescricao() ?></p>
+                        <p> <?= $cafe->getPrecoFormatado() ?></p>
                     </div>
-                    <p><?= $cafe->getNome() ?></p>
-                    <p><?= $cafe->getDescricao()?></p>
-                    <p> <?= $cafe->getPrecoFormatado() ?></p>
-                </div>
                 <?php endforeach; ?>
             </div>
 
@@ -59,15 +64,15 @@ $dadosAlmoco = $produtoRepositorio->opcoesAlmoco();
                 <img class="ornaments" src="img/ornaments-coffee.png" alt="ornaments">
             </div>
             <div class="container-almoco-produtos">
-                <?php foreach ($dadosAlmoco as $almoco):?>
-                <div class="container-produto">
-                    <div class="container-foto">
-                        <img src="<?= $almoco->getImagemFormatada() ?>" >
+                <?php foreach ($dadosAlmoco as $almoco): ?>
+                    <div class="container-produto">
+                        <div class="container-foto">
+                            <img src="<?= $almoco->getImagemFormatada() ?>">
+                        </div>
+                        <p><?= $almoco->getNome() ?></p>
+                        <p><?= $almoco->getDescricao() ?></p>
+                        <p><?= $almoco->getPrecoFormatado(); ?></p>
                     </div>
-                    <p><?= $almoco->getNome() ?></p>
-                    <p><?= $almoco->getDescricao() ?></p>
-                    <p><?= $almoco->getPrecoFormatado(); ?></p>
-                </div>
                 <?php endforeach; ?>
             </div>
 

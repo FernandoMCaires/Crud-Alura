@@ -78,7 +78,7 @@ table td{
     font-size: 20px;
 }
 
-table tbody tr td a, .botao-cadastrar, .botao-excluir{
+table tbody tr td a, .botao-cadastrar, .botao-excluir, .botao-redirect{
     padding: 3px 10px;
     border-radius: 10px;
     color: #FFFFFF;
@@ -90,7 +90,7 @@ table tbody tr td a, .botao-cadastrar, .botao-excluir{
 }
 
 
-table tbody tr td a:hover, .botao-cadastrar:hover, .botao-excluir:hover{
+table tbody tr td a:hover, .botao-cadastrar:hover, .botao-excluir:hover, .botao-redirect:hover{
     cursor: pointer;
     filter: saturate(150%);
 }
@@ -113,4 +113,8 @@ table tbody tr td a:hover, .botao-cadastrar:hover, .botao-excluir:hover{
 
 .botao-excluir{
     background: crimson;
+}
+
+.botao-redirect{
+    background-color: #857b27;
 }
